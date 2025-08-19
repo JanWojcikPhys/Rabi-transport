@@ -14,7 +14,7 @@ c = cos(π/40)
 s = sin(π/40)
 c2 = cos(π/80)
 s2 = sin(π/80)
-function ewolucja(d,tmax)                               # tmax - ostatni czasowy element 
+function ewolucja(d,tmax)                               
     ss = S(d);
     data = spzeros(Float64,tmax,d);
     psi = psi0(d);
