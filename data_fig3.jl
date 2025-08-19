@@ -10,7 +10,7 @@ L(d) = spdiagm(-1 => [1 for i in 1:d-1], d-1=>[1]);
 P(d) = spdiagm(1 => [1 for i in 1:d-1], -d+1=>[1]);
 S(d) = kron(L(d), c0) + kron(P(d), c1);
 psi0(d) = circshift([1/sqrt(2);1im/sqrt(2); zeros(2*d-2)],d+1);
-function ewolucja(d,tmax)                               # tmax - ostatni czasowy element 
+function ewolucja(d,tmax)                               
     s = S(d);
     data = spzeros(Float64,tmax,d);
     psi = psi0(d);
